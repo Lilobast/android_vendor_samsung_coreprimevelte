@@ -69,7 +69,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/lib/hw/nfc_nci.mrvl.so:system/lib/hw/nfc_nci.mrvl.so
+    $(LOCAL_PATH)/proprietary/lib/hw/nfc_nci.bcm2079x.PXA19xx.so:system/lib/hw/nfc_nci.bcm2079x.PXA19xx.so
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -82,8 +82,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/vendor/Khronos/OpenCL/vendors/ocl32_mrvl.icd:system/vendor/Khronos/OpenCL/vendors/ocl32_mrvl.icd \
-    $(LOCAL_PATH)/proprietary/vendor/firmware/sec_s3fwrn7_firmware.bin:system/vendor/firmware/sec_s3fwrn7_firmware.bin \
-    $(LOCAL_PATH)/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/bcm2079xA2_firmware.ncd:system/vendor/firmware/bcm2079xA2_firmware.ncd \
+    $(LOCAL_PATH)/proprietary/vendor/firmware/bcm2079xA2_pre_firmware.ncd:system/vendor/firmware/bcm2079xA2_pre_firmware.ncd \
+	$(LOCAL_PATH)/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
     $(LOCAL_PATH)/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     $(LOCAL_PATH)/proprietary/vendor/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
     $(LOCAL_PATH)/proprietary/vendor/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd 
