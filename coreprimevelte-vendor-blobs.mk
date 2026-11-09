@@ -155,3 +155,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libsxqk.so:system/lib/libsxqk.so \
     $(LOCAL_PATH)/proprietary/lib/libstagefrighthw.so:system/lib/libstagefrighthw_stock.so\
 
+
+# STLport runtime for Lollipop blobs (RIL, camera, NFC, DRM) (added from stock G361FXXU1APB1)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/libstlport.so:system/lib/libstlport.so \
+
+# Marvell OMX codecs (added from stock G361FXXU1APB1)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/proprietary/lib/libMrvlOmx.so:system/lib/libMrvlOmx.so \
