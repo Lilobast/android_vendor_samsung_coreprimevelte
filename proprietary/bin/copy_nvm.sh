@@ -17,6 +17,12 @@ copy_if_not_exist "/etc/audio_swvol_calibration.xml" "${NVM_ROOT_DIR}/audio_swvo
 #use default file if audio_swvol_calibration.xml is absent.
 copy_if_not_exist "/etc/audio_swvol_calibration_def.xml" "${NVM_ROOT_DIR}/audio_swvol_calibration.xml"
 copy_if_not_exist "/etc/audio_gain_calibration.xml" "${NVM_ROOT_DIR}/audio_gain_calibration.xml"
+# Keep audio gains in sync with the ROM (tuned values ship in /etc).
+if [ -f /etc/audio_gain_calibration.xml ] && ! cmp -s /etc/audio_gain_calibration.xml ${NVM_ROOT_DIR}/audio_gain_calibration.xml; then
+       cp /etc/audio_gain_calibration.xml ${NVM_ROOT_DIR}/audio_gain_calibration.xml
+       chmod 666 ${NVM_ROOT_DIR}/audio_gain_calibration.xml
+       chown system.system ${NVM_ROOT_DIR}/audio_gain_calibration.xml
+fi
 copy_if_not_exist "/etc/audio_effect_config.xml" "${NVM_ROOT_DIR}/audio_effect_config.xml"
 copy_if_not_exist "/etc/audio_MSAmain_ap.nvm" "${NVM_ROOT_DIR}/audio_MSAmain_ap.nvm"
 copy_if_not_exist "/etc/audio_ec_ap.nvm" "${NVM_ROOT_DIR}/audio_ec_ap.nvm"
