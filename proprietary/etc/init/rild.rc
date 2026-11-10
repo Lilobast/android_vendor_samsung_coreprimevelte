@@ -1,0 +1,10 @@
+# Stock (G361FXXU1APB1) rild service, with Nougat's extra groups (readproc, wakelock)
+# and the SAP socket the N framework expects.
+service ril-daemon /system/bin/rild
+    class main
+    socket rild stream 660 root radio
+    socket rild-debug stream 660 radio system
+    socket embmsd stream 666
+    socket sap_uim_socket1 stream 660 bluetooth bluetooth
+    user root
+    group radio cache inet misc audio log system readproc wakelock
