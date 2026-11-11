@@ -77,15 +77,11 @@ PRODUCT_COPY_FILES += \
 
 # Vendor libs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so \
-    $(LOCAL_PATH)/proprietary/lib/libwvm.so:system/lib/libwvm.so \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/vendor/Khronos/OpenCL/vendors/ocl32_mrvl.icd:system/vendor/Khronos/OpenCL/vendors/ocl32_mrvl.icd \
     $(LOCAL_PATH)/proprietary/vendor/firmware/bcm2079xA2_firmware.ncd:system/vendor/firmware/bcm2079xA2_firmware.ncd \
     $(LOCAL_PATH)/proprietary/vendor/firmware/bcm2079xA2_pre_firmware.ncd:system/vendor/firmware/bcm2079xA2_pre_firmware.ncd \
-	$(LOCAL_PATH)/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
-    $(LOCAL_PATH)/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     $(LOCAL_PATH)/proprietary/vendor/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
     $(LOCAL_PATH)/proprietary/vendor/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd 
 
